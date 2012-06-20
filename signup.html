@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+function fn()
+{
+	if((document.getElementById("name").value=="")||(document.getElementById("lname").value=="")||(document.getElementById("uname").value=="")||(document.getElementById("pwd").value=="")||(document.getElementById("pwd1").value==""))
+{
+		alert("You can not leave fields blank");
+		return false;
+}
+if(document.getElementById("pwd").value!=document.getElementById("pwd1").value)
+{alert("passwords don't match");return false;}
+else
+		return true;
+}
+</script>
+</head>
+<body background="bg.jpg">
+<form name="Signup" action="signup" method="POST" onSubmit="return fn()">
+<p>
+<img src="signup.jpg" alt="WELCOME" width="1000" height="650" align="left"/>
+First Name      : <input type="text" name="fname" id="name" /><br/>
+Last Name       : <input type="text" name="lname" id="lname" /><br/>
+Email ID        : <input type="email" name="uname" id="uname" /><br/>
+Password        : <input type="password" name="pwd" id="pwd" /><br/>
+Confirm Password: <input type="password" name="pwd1" id="pwd1" /><br/>
+<input type="Submit" value="Submit"/>
+</p></form>
+</body>
+</html>
+
